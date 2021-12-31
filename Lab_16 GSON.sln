@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_16 GSON", "Lab_16 GSON\Lab_16 GSON.csproj", "{3EFC9489-7B23-4CB1-8A95-6D2917050CCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deserialize", "Deserialize\Deserialize.csproj", "{04722755-5C31-4911-9658-2FDF9FCECF7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EFC9489-7B23-4CB1-8A95-6D2917050CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFC9489-7B23-4CB1-8A95-6D2917050CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFC9489-7B23-4CB1-8A95-6D2917050CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFC9489-7B23-4CB1-8A95-6D2917050CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04722755-5C31-4911-9658-2FDF9FCECF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04722755-5C31-4911-9658-2FDF9FCECF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04722755-5C31-4911-9658-2FDF9FCECF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04722755-5C31-4911-9658-2FDF9FCECF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D54E1153-3F6A-4A1A-B253-EC4F80E3576E}
+	EndGlobalSection
+EndGlobal
