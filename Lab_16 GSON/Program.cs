@@ -40,7 +40,9 @@ namespace Lab_16_GSON
                 JsonSerializerOptions options = new JsonSerializerOptions()
                 {
                     Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
-                    WriteIndented = true
+                    WriteIndented = true //добавляет Отступ вложенных маркеров JSON, Добавление новых строк,
+                                         //Добавление пробелов между именами свойств и значениями.
+
                 };
                 string jsonString = JsonSerializer.Serialize(product, options);
 
