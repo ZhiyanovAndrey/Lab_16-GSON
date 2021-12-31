@@ -21,17 +21,20 @@ namespace Lab_16_GSON
             static void Main(string[] args)
             {
                 const int n = 5;
-                Product[] employees = new Product[n];
+                Product[] product = new Product[n];
 
                 for (int i = 0; i < n; i++)
                 {
-                    Console.WriteLine("Введите номер");
-                    int num = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Введите имя");
+                    Console.WriteLine("Введите код товара» (целое число)");
+                    int cod = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Название товара");
                     string name = Console.ReadLine();
-                    Console.WriteLine("Введите зп");
-                    int summa = Convert.ToInt32(Console.ReadLine());
-                    employees[i] = new Product() { Num = num, Name = name, Summa = summa };
+                    Console.WriteLine("Введите цену товара (в формате 45,55)");
+                    decimal price = Convert.ToDecimal(Console.ReadLine());
+          //вызываем конструктор по умолчанию () и для инициализации {перечисляем свойства и присваиваем переменные}
+                    product[i] = new Product() { CodOfProduct = cod, NameOfProduct = name, Price = price }; 
+          //каждая ячейка массива это новый экземпляр класса Prodact              
+
                 }
 
                 JsonSerializerOptions options = new JsonSerializerOptions()
@@ -39,15 +42,15 @@ namespace Lab_16_GSON
                     Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
                     WriteIndented = true
                 };
-                string jsonString = JsonSerializer.Serialize(employees, options);
+                string jsonString = JsonSerializer.Serialize(product, options);
 
-                using (StreamWriter sw = new StreamWriter("../../../Employees.json"))
+                using (StreamWriter sw = new StreamWriter("Product.json"))
                 {
                     sw.WriteLine(jsonString);
                 }
             }
         }
-  class 
+  
     
 
 }
