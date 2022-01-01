@@ -20,17 +20,21 @@ namespace Deserialize
             {
                 jsonString = sr.ReadToEnd();//Readline считывает одну строку, ReadToEnd весь файл
             }
-            Product[] employees = JsonSerializer.Deserialize<Product[]>(jsonString);
+            Product[] products = JsonSerializer.Deserialize<Product[]>(jsonString);
 
-            Product maxPrice = employees[0];
-            foreach (Product e in employees)
+            Product maxPrice = products[0];//сохраняем не один элемент Price, а целиком товар[] 
+            foreach (Product item in products)
             {
-                if (e.Price > maxPrice.Price)
+                if (item.Price > maxPrice.Price)//сравнивает переменную цены и присваивает в maxPrice,
+                                                //переменная Price вызывается относительно обьекта item 
+                                                //оператор-точка связывает имя объекта с именем члена класса служит для 
+                                                //доступа к переменным экземпляра и методам
                 {
-                    maxPrice = e;
+                    maxPrice = item; 
                 }
             }
             Console.WriteLine($"Самый дорогой товар: {maxPrice.NameOfProduct} \nЦена товара: {maxPrice.Price}  Код товара: {maxPrice.CodOfProduct}");
+           //вывод переменная NameOfProduct вызваной относительно maxPrice-массива prodacts)
             Console.ReadKey();
         }
     }

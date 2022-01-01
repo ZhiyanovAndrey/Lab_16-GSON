@@ -52,9 +52,6 @@ namespace Lab_16_GSON
                 }
             }
         }
-  
-    
-
 }
 
     
